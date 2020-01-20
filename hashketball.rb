@@ -215,12 +215,12 @@ def long_name_steals_a_ton?
 
 end
 
-def player_with_the_most(players)
-  player_with_most_points = {}
-  current_biggest_score = 0
+def player_with_the_biggest_stat(players,stat)
+  player_with_the_biggest_stat = {}
+  biggest_stat_found = 0
   players.each do |player|
-    if(player[:points] > current_biggest_score)
-      current_biggest_score = player[:points]
+    if(player[stat] > biggest_stat_found)
+      biggest_stat_found = player[stat]
       player_with_most_points_score = player
     end
   end
