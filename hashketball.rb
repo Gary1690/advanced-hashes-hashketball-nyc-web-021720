@@ -198,7 +198,8 @@ current_longest_name
 end
 
 def long_name_steals_a_ton?
-
+  players = get_all_players(game_hash)
+  player_with_longest_name == player_with_the_biggest_stat
 end
 
 def player_with_the_biggest_stat(players,stat)
