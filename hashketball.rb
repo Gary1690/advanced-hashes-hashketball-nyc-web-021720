@@ -182,14 +182,7 @@ end
 
 def most_points_scored
     players = get_all_players(game_hash)
-    player_with_most_points_score = {}
-    current_biggest_score = 0
-    players.each do |player|
-      if(player[:points] > current_biggest_score)
-        current_biggest_score = player[:points]
-        player_with_most_points_score = player
-      end
-    end
+    player = player_with_the_biggest_stat(players,:points)
     player_with_most_points_score[:player_name]
 end
 
