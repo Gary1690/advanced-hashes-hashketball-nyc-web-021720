@@ -216,14 +216,15 @@ def long_name_steals_a_ton?
 end
 
 def player_with_the_biggest_stat(players,stat)
-  player_with_the_biggest_stat = {}
+  player_with_the_biggest_stat_found = {}
   biggest_stat_found = 0
   players.each do |player|
     if(player[stat] > biggest_stat_found)
       biggest_stat_found = player[stat]
-      player_with_the_biggest_stat = player
+      player_with_the_biggest_stat_found = player
     end
   end
+  player_with_the_biggest_stat_found
 end
 
 def team_total_point(team)
