@@ -169,15 +169,8 @@ end
 
 def big_shoe_rebounds
     players = get_all_players(game_hash)
-    player_with_biggest_shoe = {}
-    current_biggest_shoe_size = 0
-    players.each do |player|
-      if(player[:shoe] > current_biggest_shoe_size)
-        current_biggest_shoe_size = player[:shoe]
-        player_with_biggest_shoe = player
-      end
-    end
-    player_with_biggest_shoe[:rebounds]
+    player = player_with_the_biggest_stat(players,:shoe)
+    player[:rebounds]
 end
 
 def most_points_scored
