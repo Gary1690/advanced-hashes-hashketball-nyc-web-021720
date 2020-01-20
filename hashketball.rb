@@ -182,7 +182,15 @@ end
 
 def most_points_scored
     players = get_all_players(game_hash)
-    player_with_the_most_stat(players,:points)[:name]
+    player_with_most_points_score = {}
+    current_biggest_score = 0
+    players.each do |player|
+      if(player[:points] > current_biggest_score)
+        current_biggest_score = player[:points]
+        player_with_most_points_score = player
+      end
+    end
+    player_with_most_points_score[:player_name]
 end
 
 def winning_team
@@ -207,16 +215,15 @@ def long_name_steals_a_ton?
 
 end
 
-def player_with_the_most_stat(players,stat)
-  player_with_the_biggest_searched_stat = {}
-  found_biggest_stat  = 0
+def player_with_the_most(players)
+  player_with_most_points = {}
+  current_biggest_score = 0
   players.each do |player|
-    if(player[stat] > found_biggest_stat)
-      found_biggest_stat = player[stat]
-      player_with_the_biggest_searched_stat = player
+    if(player[:points] > current_biggest_score)
+      current_biggest_score = player[:points]
+      player_with_most_points_score = player
     end
   end
-  player_with_the_biggest_searched_stat
 end
 
 def team_total_point(team)
