@@ -207,7 +207,7 @@ def long_name_steals_a_ton?
 
 end
 
-def player_with_the_most(players,stat)
+def player_with_the_most_stat(players,stat)
   player_with_the_biggest_searched_stat = {}
   found_biggest_stat  = 0
   players.each do |player|
