@@ -221,7 +221,7 @@ def player_with_the_biggest_stat(players,stat)
   players.each do |player|
     if(player[stat] > biggest_stat_found)
       biggest_stat_found = player[stat]
-      player_with_most_points_score = player
+      player_with_the_biggest_stat = player
     end
   end
 end
