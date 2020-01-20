@@ -212,7 +212,7 @@ def player_with_the_most(players,stat)
   found_biggest_stat  = 0
   players.each do |player|
     if(player[stat] > found_biggest_stat)
-      found_biggest_stat = current_search_stat
+      found_biggest_stat = player[stat]
       player_with_the_biggest_searched_stat = player
     end
   end
