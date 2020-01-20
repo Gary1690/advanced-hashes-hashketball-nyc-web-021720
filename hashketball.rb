@@ -182,7 +182,7 @@ end
 
 def most_points_scored
     players = get_all_players(game_hash)
-    player_with_the_most(players){|x| x[:points]}[:name]
+    player_with_the_most(players){|x| x[:points] }[:name]
 end
 
 def winning_team
